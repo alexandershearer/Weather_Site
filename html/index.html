@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgb(167, 242, 255)">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/weather.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/weather.css">
 
     <title>Weather</title>
 
@@ -29,21 +29,55 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://darksky.net/dev" target="_blank" style="font-style:italic">Powered by Dark Sky</a>
+                    <a class="nav-link" href="https://darksky.net/dev" target="_blank" style="font-style:italic">Powered
+                        by Dark Sky</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://developer.mapquest.com/documentation/geocoding-api/" target="_blank" style="font-style:italic">MapQuest Geocoding API</a>
+                    <a class="nav-link" href="https://developer.mapquest.com/documentation/geocoding-api/"
+                        target="_blank" style="font-style:italic">MapQuest Geocoding API</a>
                 </li>
             </ul>
         </div>
         <form class="form-inline">
-            <input class="form-control mr-sm-2" style="background-color: rgb(167, 242, 255)" type="search" placeholder="Address/City/Zip" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Get Weather</button>
+            <input id="searchBar" class="form-control mr-sm-2" style="background-color: rgb(255, 255, 255)"
+                type="search" placeholder="Address/City/Zip" aria-label="Search">
+            <button id="submit" class="btn btn-outline-light my-2 my-sm-0" type="button">Get Weather</button>
         </form>
     </nav>
     <!--Navbar html end-->
 
 
+    <!--Weather Card-->
+    <div class="container">
+        <div class="row">
+            <div id="template" class="col-xs-12 col-lg-4">
+                <div class="weatherCard">
+                    <button type="button" id="remove">X</button>
+                    <h1>Louisville</h1>
+                    <h1>50&#8457</h1>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Location: Louisville</li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Current Conditions: Overcast</li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">High Temp: 75&#8457</li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Low Temp: 30&#8457</li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Chance of Precipitation: 40%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--End of weather card-->
 
 
 
@@ -58,7 +92,6 @@
         crossorigin="anonymous"></script>
 
     <script src="../js/apiKeys.js"></script>
-
 
     <script src="../js/scripts.js"></script>
 </body>
