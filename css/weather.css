@@ -6,8 +6,9 @@ body {
     margin-top: 40px;
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 5px 2px 4px rgb(255, 255, 255);
-border-radius: 10px;
+    border-radius: 10px;
 }
+
 h1{
     text-align: center;
     margin: 12px auto;
